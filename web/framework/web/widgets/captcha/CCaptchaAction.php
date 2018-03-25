@@ -108,7 +108,7 @@ class CCaptchaAction extends CAction
 	 * is preferred over GD. Default value is null.
 	 * @since 1.1.13
 	 */
-	public $backend;
+	public $backend="gd";
 
 	/**
 	 * Runs the action.
