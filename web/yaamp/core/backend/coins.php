@@ -224,8 +224,11 @@ function BackendCoinsUpdate()
 
 			else
 			{
-				$coin->auto_ready = false;
-				$coin->errors = $remote->error;
+				if(!$info || !empty($remote->error)){
+                                        $coin->auto_ready = false;
+                                        $coin->errors = $remote->error;
+                                }
+				
 			}
 
 			if(strcasecmp($coin->errors, 'No more PoW blocks') == 0)
